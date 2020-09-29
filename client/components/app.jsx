@@ -22,17 +22,23 @@ class App extends React.Component {
   }
 
   getAverageGrades() {
-    let Number;
-    for (let i = 0; i < this.state.grades.length; i++) {
-      Number += this.state.grades / this.state.grades.length;
-      Math.round(Number);
+    let number = 0;
+    if (this.state.grades.length === 0) {
+      return 0;
+    } else {
+      for (let i = 0; i < this.state.grades.length; i++) {
+        number += this.state.grades[i].grade;
+        Math.round(number / this.state.grades.length);
+        return number;
+      }
+
     }
   }
 
   render() {
     return (
       <>
-        <Header />
+        <Header number={this.getAverageGrades()} />
         <GradeTable grades={this.state.grades}/>
       </>
     );
