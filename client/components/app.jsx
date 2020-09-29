@@ -8,6 +8,7 @@ class App extends React.Component {
     this.state = {
       grades: []
     };
+    this.getAverageGrades = this.getAverageGrades.bind(this);
   }
 
   componentDidMount() {
@@ -21,8 +22,11 @@ class App extends React.Component {
   }
 
   getAverageGrades() {
-    fetch('api/grades')
-      .then(res => res.json());
+    let Number;
+    for (let i = 0; i < this.state.grades.length; i++) {
+      Number += this.state.grades / this.state.grades.length;
+      Math.round(Number);
+    }
   }
 
   render() {
