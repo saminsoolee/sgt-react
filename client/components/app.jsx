@@ -20,10 +20,17 @@ class App extends React.Component {
       .then(data => this.setState({ grades: data }));
   }
 
+  getAverageGrades() {
+    fetch('api/grades')
+      .then(res => res.json());
+  }
+
   render() {
     return (
-      <Header />,
-      <GradeTable grades={this.state.grades}/>
+      <>
+        <Header />
+        <GradeTable grades={this.state.grades}/>
+      </>
     );
 
   }
