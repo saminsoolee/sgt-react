@@ -1,3 +1,7 @@
 .average-grade{
 padding-left: 30%;
 }
+
+.table-container {
+  display: flex
+}
