@@ -2,6 +2,21 @@
 padding-left: 30%;
 }
 
-.table-container {
-  display: flex
+h1 {
+  padding: 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+input {
+  padding: 5px;
+  margin: 5px;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
 }

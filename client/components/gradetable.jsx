@@ -4,7 +4,7 @@ import Grade from './grade';
 class GradeTable extends React.Component {
   render() {
     return (
-      <div className="col-7 table-container">
+      <div className="col-9 table-container">
         <table className="table table-striped">
           <thead className="thead-dark">
             <tr>
