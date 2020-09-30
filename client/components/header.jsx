@@ -6,7 +6,7 @@ class Header extends React.Component {
       <header>
         <h1>Student Grade Table
           <span className="average-grade">Average Grade
-            <p className="badge badge-secondary">{this.props.number}</p>
+            <p className="badge badge-secondary avg-num">{this.props.number}</p>
           </span>
         </h1>
       </header>
