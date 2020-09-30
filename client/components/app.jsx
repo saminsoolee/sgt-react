@@ -30,10 +30,9 @@ class App extends React.Component {
     } else {
       for (let i = 0; i < this.state.grades.length; i++) {
         number += this.state.grades[i].grade;
-        Math.round(number / this.state.grades.length);
-        return number;
       }
-
+      number = Math.round(number / this.state.grades.length);
+      return number;
     }
   }
 
@@ -44,8 +43,10 @@ class App extends React.Component {
       body: JSON.stringify(grade)
     })
       .then(res => res.json())
-      .then(data => this.setState({ grades: this.state.grade.concat(data) }))
-      .catch(error => console.error(error));
+      .then(data => {
+        this.setState({ grades: this.state.grades.concat(data) });
+      })
+      .catch(error => console.error(error.message));
   }
 
   render() {
@@ -53,7 +54,7 @@ class App extends React.Component {
       <>
         <Header number={this.getAverageGrades()} />
         <GradeTable grades={this.state.grades}/>
-        <GradeForm/>
+        <GradeForm addNewGrade={this.addNewGrade}/>
       </>
     );
 
