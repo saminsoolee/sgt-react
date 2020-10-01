@@ -1,28 +1,16 @@
 {
   "grades": [
     {
-      "id": 5,
-      "name": "Kyle Simpson",
-      "course": "JavaScript",
-      "grade": 100
+      "name": "Tim Davis ",
+      "course": "Masta",
+      "grade": 100,
+      "id": 33
     },
     {
-      "id": 12,
-      "name": "Brendan Eich",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "id": 32,
-      "name": "Douglas Crockford",
-      "course": "JavaScript",
-      "grade": 100
-    },
-    {
-      "name": "Samuel Lee",
+      "name": "Sam Lee",
       "course": "Web Dev",
       "grade": 50,
-      "id": 48
+      "id": 34
     }
   ]
 }
